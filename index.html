@@ -9,11 +9,7 @@
 
 <style>
 /* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 /* Body */
 body {
@@ -32,204 +28,48 @@ header {
     border-bottom: 5px solid #b22222;
     text-shadow: 2px 2px 5px #000;
 }
-
-header h1 {
-    font-family: 'UnifrakturCook', cursive;
-    font-size: 3.5rem;
-    letter-spacing: 2px;
-}
-
-header p {
-    font-size: 1.3rem;
-    margin-top: 10px;
-    opacity: 0.9;
-}
+header h1 { font-family: 'UnifrakturCook', cursive; font-size: 3.5rem; letter-spacing: 2px; }
+header p { font-size: 1.3rem; margin-top: 10px; opacity: 0.9; }
 
 /* Product Section */
-#product {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 50px 20px;
-    padding: 20px;
-}
+#product { display: flex; flex-wrap: wrap; justify-content: center; margin: 50px 20px; padding: 20px; }
+.product-image { flex: 1 1 350px; text-align: center; margin: 10px; border: 3px solid #b22222; border-radius: 12px; box-shadow: 0 0 25px #b22222; }
+.product-image img { max-width: 100%; border-radius: 12px; transition: transform 0.3s, box-shadow 0.3s; }
+.product-image img:hover { transform: scale(1.05) rotate(-1deg); box-shadow: 0 0 35px #ff0000; }
+.product-details { flex: 2 1 450px; margin: 10px; background: rgba(20, 0, 0, 0.75); padding: 30px; border-radius: 12px; border: 2px solid #b22222; box-shadow: 0 0 20px #8b0000 inset; }
+.product-details h2 { color: #ff0000; font-family: 'UnifrakturCook', cursive; margin-bottom: 20px; font-size: 2.2rem; }
+.product-details p { margin-bottom: 20px; font-size: 1.1rem; }
+.product-details h3 { font-family: 'UnifrakturCook', cursive; color: #b22222; margin-bottom: 15px; font-size: 1.5rem; }
+.product-details ul { list-style: square inside; margin-bottom: 25px; }
+.buy-button { display: inline-block; background: #b22222; color: #fff; padding: 18px 35px; text-decoration: none; font-weight: bold; border-radius: 6px; transition: all 0.3s; box-shadow: 0 0 12px #ff0000; text-transform: uppercase; font-size: 1.2rem; }
+.buy-button:hover { background: #ff0000; transform: scale(1.05); box-shadow: 0 0 25px #ff4444; }
 
-.product-image {
-    flex: 1 1 350px;
-    text-align: center;
-    margin: 10px;
-    border: 3px solid #b22222;
-    border-radius: 12px;
-    box-shadow: 0 0 25px #b22222;
-}
-
-.product-image img {
-    max-width: 100%;
-    border-radius: 12px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.product-image img:hover {
-    transform: scale(1.05) rotate(-1deg);
-    box-shadow: 0 0 35px #ff0000;
-}
-
-.product-details {
-    flex: 2 1 450px;
-    margin: 10px;
-    background: rgba(20, 0, 0, 0.75);
-    padding: 30px;
-    border-radius: 12px;
-    border: 2px solid #b22222;
-    box-shadow: 0 0 20px #8b0000 inset;
-}
-
-.product-details h2 {
-    color: #ff0000;
-    font-family: 'UnifrakturCook', cursive;
-    margin-bottom: 20px;
-    font-size: 2.2rem;
-}
-
-.product-details p {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-}
-
-.product-details h3 {
-    font-family: 'UnifrakturCook', cursive;
-    color: #b22222;
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-}
-
-.product-details ul {
-    list-style: square inside;
-    margin-bottom: 25px;
-}
-
-.buy-button {
-    display: inline-block;
-    background: #b22222;
-    color: #fff;
-    padding: 18px 35px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 6px;
-    transition: all 0.3s;
-    box-shadow: 0 0 12px #ff0000;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-}
-
-.buy-button:hover {
-    background: #ff0000;
-    transform: scale(1.05);
-    box-shadow: 0 0 25px #ff4444;
-}
-
-/* Reasons Section */
-#reasons {
-    background: rgba(0,0,0,0.85);
-    border: 2px solid #b22222;
-    border-radius: 12px;
-    margin: 50px 20px;
-    padding: 30px;
-    box-shadow: 0 0 25px #8b0000 inset;
-}
-
-#reasons h2 {
-    font-family: 'UnifrakturCook', cursive;
-    color: #ff0000;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 2rem;
-}
-
-#reasons ul {
-    list-style: disc inside;
-    font-size: 1.1rem;
-}
-
-#reasons ul li {
-    margin-bottom: 12px;
-}
+/* Sections */
+section { margin: 50px 20px; padding: 30px; border-radius: 12px; background: rgba(0,0,0,0.85); border: 2px solid #b22222; box-shadow: 0 0 25px #8b0000 inset; }
+h2 { font-family: 'UnifrakturCook', cursive; color: #ff0000; margin-bottom: 20px; text-align: center; font-size: 2rem; }
+ul { list-style: disc inside; font-size: 1.1rem; }
+ul li { margin-bottom: 12px; }
+table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+th, td { border: 2px solid #b22222; padding: 12px; text-align: center; }
+th { background: #5a0000; color: #fff; font-family: 'UnifrakturCook', cursive; }
+.favorite { background: rgba(255,0,0,0.2); font-weight: bold; }
 
 /* Alternative Options */
-.option-buttons {
-    text-align: center;
-    margin: 40px 20px;
-}
-
-.option-buttons h3 {
-    font-family: 'UnifrakturCook', cursive;
-    color: #ff0000;
-    margin-bottom: 20px;
-}
-
-.option-btn {
-    display: block;
-    margin: 10px auto;
-    max-width: 420px;
-    padding: 12px;
-    border: 2px solid #b22222;
-    color: #fff;
-    text-decoration: none;
-    box-shadow: 0 0 12px #8b0000;
-    border-radius: 6px;
-}
-
-.option-btn:hover {
-    background: #b22222;
-}
+.option-buttons { text-align: center; margin: 40px 20px; }
+.option-buttons h3 { font-family: 'UnifrakturCook', cursive; color: #ff0000; margin-bottom: 20px; }
+.option-btn { display: block; margin: 10px auto; max-width: 420px; padding: 12px; border: 2px solid #b22222; color: #fff; text-decoration: none; box-shadow: 0 0 12px #8b0000; border-radius: 6px; }
+.option-btn:hover { background: #b22222; }
 
 /* Video */
-.video-wrapper {
-    display: flex;
-    justify-content: center;
-    margin: 60px 20px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.video-wrapper iframe {
-    width: 100%;
-    max-width: 720px;
-    height: 405px;
-    border: 3px solid #b22222;
-    border-radius: 12px;
-    box-shadow: 0 0 25px #8b0000;
-    margin-bottom: 15px;
-}
-
-.video-caption {
-    font-size: 1rem;
-    max-width: 720px;
-    color: #ffcccc;
-    line-height: 1.4;
-    margin-top: 5px;
-}
+.video-wrapper { display: flex; justify-content: center; margin: 60px 20px; flex-direction: column; align-items: center; text-align: center; }
+.video-wrapper iframe { width: 100%; max-width: 720px; height: 405px; border: 3px solid #b22222; border-radius: 12px; box-shadow: 0 0 25px #8b0000; margin-bottom: 15px; }
+.video-caption { font-size: 1rem; max-width: 720px; color: #ffcccc; line-height: 1.4; margin-top: 5px; }
 
 /* Last Checked */
-.last-checked {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #888;
-    margin-top: 10px;
-}
+.last-checked { text-align: center; font-size: 0.9rem; color: #888; margin-top: 10px; }
 
 /* Footer */
-footer {
-    text-align: center;
-    padding: 25px;
-    background: #111;
-    color: #b22222;
-    font-family: 'UnifrakturCook', cursive;
-    border-top: 5px solid #b22222;
-    margin-top: 50px;
-    text-shadow: 1px 1px 3px #000;
-}
+footer { text-align: center; padding: 25px; background: #111; color: #b22222; font-family: 'UnifrakturCook', cursive; border-top: 5px solid #b22222; margin-top: 50px; text-shadow: 1px 1px 3px #000; }
 </style>
 </head>
 
@@ -247,7 +87,7 @@ footer {
 
     <div class="product-details">
         <h2>$699.99 - $799.99</h2>
-        <p>The ultimate metal axe. Mahogany body, set neck, and rosewood fingerboard deliver crushing tone. Built for riffs, sustain, and attitude.</p>
+        <p>The ultimate metal axe. Mahogany body, set neck, and rosewood fingerboard deliver crushing tone. Built for riffs, sustain, and attitude. Easy to play, practically no maintenance, and stays perfectly in tune no matter how long you practice. This guitar will make any player better instantly.</p>
 
         <h3>Specifications</h3>
         <ul>
@@ -264,9 +104,7 @@ footer {
             <li><strong>Weight:</strong> ~3.5 kg / 7.7 lbs</li>
         </ul>
 
-        <a class="buy-button" target="_blank" href="https://www.deanguitars.com/product-ml79cbk/">
-            Check It Out
-        </a>
+        <a class="buy-button" target="_blank" href="https://www.deanguitars.com/product-ml79cbk/">Check It Out</a>
         <p class="last-checked">Listings last checked: 7/1/26</p>
     </div>
 </section>
@@ -274,43 +112,82 @@ footer {
 <section id="reasons">
     <h2>Why You Should Buy This for Me</h2>
     <ul>
-        <li>It motivates daily practice and improvement.</li>
+        <li>Motivates daily practice and improvement.</li>
         <li>Legendary Dean ML shape used by Dimebag Darrell.</li>
         <li>Built to last for years; survives heavy use and even headstock damage.</li>
         <li>Encourages creativity, focus, and metal shredding skills.</li>
         <li>Perfect for Pantera, Type O Negative, and Southern Texas metal riffs.</li>
+        <li>Extremely easy to play; practically no maintenance required.</li>
+        <li>Practicing all day won’t knock it out of tune, making me a better player faster.</li>
         <li>A guitar that looks as heavy as it sounds – sheer visual and tonal impact.</li>
     </ul>
 </section>
 
+<section id="legacy">
+    <h2>Legacy of the ML 79</h2>
+    <p>The Dean ML 79 is not just a guitar — it’s a legend. Made famous by Dimebag Darrell, this axe has carved the sound of Southern Texas metal into history. From Pantera classics to heavy riffs that shatter the stage, owning this guitar is owning a piece of metal legacy.</p>
+</section>
+
+<section id="tone">
+    <h2>Sound & Tone</h2>
+    <p>With DMT Time Capsule pickups and a mahogany body, the ML 79 delivers aggressive, punchy metal tones perfect for fast riffs and soaring solos. Sustain for days, warm mids for epic solos, and crushing lows for breakdowns. This guitar inspires shredding and improves your playing naturally.</p>
+</section>
+
+<section id="care">
+    <h2>Care & Maintenance</h2>
+    <ul>
+        <li>Practically zero maintenance required.</li>
+        <li>Floyd Rose stays stable, Grover Locking tuners keep it in tune.</li>
+        <li>Wipe down after practice to preserve finish.</li>
+        <li>Even heavy use or headstock bumps won’t stop it from performing.</li>
+    </ul>
+</section>
+
+<section id="comparison">
+    <h2>ML 79 vs Other ML Models</h2>
+    <table>
+        <tr>
+            <th>Model</th>
+            <th>Pickups</th>
+            <th>Frets</th>
+            <th>Price</th>
+        </tr>
+        <tr class="favorite">
+            <td>ML 79 CBK</td>
+            <td>DMT Time Capsule</td>
+            <td>22</td>
+            <td>$699.99 - $799.99</td>
+        </tr>
+        <tr>
+            <td>ML 79 F</td>
+            <td>EMG 81/85</td>
+            <td>24</td>
+            <td>$899.99</td>
+        </tr>
+        <tr>
+            <td>ML 1-Standard</td>
+            <td>Stock Dean</td>
+            <td>22</td>
+            <td>$599.99</td>
+        </tr>
+    </table>
+    <p style="text-align:center; margin-top:10px; color:#ffcccc;">Our favorite: the ML 79 CBK — perfect balance of tone, playability, and metal heritage. The easiest to play, stays in tune all day, and will make any player better instantly.</p>
+</section>
+
 <div class="option-buttons">
     <h3>Alternative Buying Options</h3>
-
-    <a class="option-btn" target="_blank" href="https://reverb.com/item/55234151-dean-model-ml-79-f-cbk-classic-black-solid-body-electric-guitar-w-floyd-rose-trm">
-        Reverb Listing (Sold)
-    </a>
-
-    <a class="option-btn" target="_blank" href="https://smi-music.com/en/products/dean-79-mlf-cbk-electric-guitar">
-        SMI Music (Available)
-    </a>
-
-    <a class="option-btn" target="_blank" href="https://wizardguitars.com/product/dean-ml-79-floyd-classic-black/">
-        Wizard Guitars (Available)
-    </a>
+    <a class="option-btn" target="_blank" href="https://reverb.com/item/55234151-dean-model-ml-79-f-cbk-classic-black-solid-body-electric-guitar-w-floyd-rose-trm">Reverb Listing (Sold)</a>
+    <a class="option-btn" target="_blank" href="https://smi-music.com/en/products/dean-79-mlf-cbk-electric-guitar">SMI Music (Available)</a>
+    <a class="option-btn" target="_blank" href="https://wizardguitars.com/product/dean-ml-79-floyd-classic-black/">Wizard Guitars (Available)</a>
+    <a class="option-btn" target="_blank" href="https://reverb.com/ie/item/93832513-dean-ml-79-floyd-2025-classic-black?bk=eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI5NjdhODg4Ni0yZDU1LTRlMzgtYjM3ZS1iMDlhNjIyYzdiMTEiLCJpYXQiOjE3Njc4MDQ1OTQsInVzZXJfaWQiOiIiLCJzZXNzaW9uX2lkIjoiMjM0MjhiMjktMGQwMy00N2IyLWI2NzEtZjFhN2FjZTQ4ODVhIiwiY29va2llX2lkIjoiOWU2MTQ5M2YtYzEyZS00ZWVmLThkNGMtMmFhNmY0MjQ3M2YyIiwicHJvZHVjdF9pZCI6IjkzODMyNTEzIiwic291cmNlIjoiTk9ORSJ9.-oS-XquX6EVbKbC7EhCScotAJJcwGLFnNrGbUjT4IX8">Reverb (Available)</a>
+    <a class="option-btn" target="_blank" href="https://reverb.com/ie/item/93661705-dean-ml-79-floyd-classic-black">Reverb (Available)</a>
+    <p class="last-checked">Listings last checked: 7/1/26</p>
+ <p class="last-checked">This guitar is VERY hard to find, I would like a new one but I am perfectly happy with second hand since new ones are basically impossible to find since they do not make these anymore.</p>
 </div>
- 
-<div class="video-wrapper">
-    <iframe
-        src="https://www.youtube.com/embed/UNfmdjmyaDo"
-        title="Dimebag Darrell Shredding Dean ML 79"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-    </iframe>
 
-    <p class="video-caption">
-        Watch Dimebag Darrell shred on a similar Dean ML 79. Even if the headstock breaks, this guitar keeps playing — proof of its legendary durability and quality. This guitar is built to last and will inspire years of metal riffs.
-    </p>
+<div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/UNfmdjmyaDo" title="Dimebag Darrell Shredding Dean ML 79" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p class="video-caption">Watch Dimebag Darrell shred on a similar Dean ML 79. Even if the headstock breaks, this guitar keeps playing — proof of its legendary durability and quality. Built to last and inspire years of metal riffs.</p>
 </div>
 
 <footer>
